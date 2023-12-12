@@ -1,0 +1,11 @@
+DateTime	2023-12-12T02:16:16
+ReadFiles	fake_reads.fq
+Reference	/home/jupyter-myee/projects/nextflow/cgphylogeny/ref/reference.fna
+ReferenceSize	2065522
+Software	snippy 4.6.0
+Variant-COMPLEX	4981
+Variant-DEL	256
+Variant-INS	203
+Variant-MNP	2
+Variant-SNP	23317
+VariantTotal	28759
