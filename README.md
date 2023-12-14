@@ -72,7 +72,7 @@ git clone https://github.com/mayee123/PhylogenyCG.git
 
 To run the pipeline, go to the project directory
 ```sh
-cd Phylogenycg
+cd PhylogenyCG
 ```
 And run
 ```sh
