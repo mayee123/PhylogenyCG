@@ -1,0 +1,136 @@
+Dec-13 23:13:33.383 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity
+Dec-13 23:13:33.530 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.3
+Dec-13 23:13:33.557 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jupyter-myee/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3,nf-tower@1.5.12,nf-wave@0.8.4
+Dec-13 23:13:33.570 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-13 23:13:33.572 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-13 23:13:33.576 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-13 23:13:33.589 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-13 23:13:33.609 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jupyter-myee/projects/nextflow/phylogenycg/nextflow.config
+Dec-13 23:13:33.610 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jupyter-myee/projects/nextflow/phylogenycg/nextflow.config
+Dec-13 23:13:33.635 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-13 23:13:34.557 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [singularity]
+Dec-13 23:13:34.619 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-13 23:13:34.627 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [fabulous_boltzmann] DSL2 - revision: e0dbfc26eb
+Dec-13 23:13:34.628 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-13 23:13:34.628 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-13 23:13:34.650 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/jupyter-myee/.nextflow/secrets/store.json
+Dec-13 23:13:34.655 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7730ef88] - activable => nextflow.secret.LocalSecretsProvider@7730ef88
+Dec-13 23:13:34.738 [main] DEBUG nextflow.Session - Session UUID: 794a6d21-de72-4f4a-bae5-ebff296ea3db
+Dec-13 23:13:34.738 [main] DEBUG nextflow.Session - Run name: fabulous_boltzmann
+Dec-13 23:13:34.739 [main] DEBUG nextflow.Session - Executor pool size: 16
+Dec-13 23:13:34.754 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-13 23:13:34.791 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.3 build 5875
+  Created: 11-08-2023 18:37 UTC 
+  System: Linux 5.4.0-150-generic
+  Runtime: Groovy 3.0.16 on OpenJDK 64-Bit Server VM 11.0.16+8
+  Encoding: UTF-8 (UTF-8)
+  Process: 11908@jupyterdev [192.168.151.168]
+  CPUs: 16 - Mem: 176.9 GB (29.3 GB) - Swap: 0 (0)
+Dec-13 23:13:34.825 [main] DEBUG nextflow.Session - Work-dir: /opt/share/nextflow_workdir/jupyter-myee [ext2/ext3]
+Dec-13 23:13:34.826 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jupyter-myee/projects/nextflow/phylogenycg/bin
+Dec-13 23:13:34.870 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, GoogleBatchExecutor]
+Dec-13 23:13:34.887 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-13 23:13:34.890 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-13 23:13:34.914 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-13 23:13:34.929 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Dec-13 23:13:35.530 [main] DEBUG nextflow.Session - Session start
+Dec-13 23:13:35.890 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-13 23:13:35.909 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `help` -- Initialise it to a default value eg. `params.help = some_value`
+Dec-13 23:13:37.065 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNIPPY_RUN` matches process CGPHYLOGENY:SNIPPY_RUN
+Dec-13 23:13:37.074 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.074 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.080 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-13 23:13:37.086 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=176.9 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Dec-13 23:13:37.212 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNIPPY_CORE` matches process CGPHYLOGENY:SNIPPY_CORE
+Dec-13 23:13:37.214 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.215 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.223 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNIPPY_CLEAN` matches process CGPHYLOGENY:SNIPPY_CLEAN
+Dec-13 23:13:37.224 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.224 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.229 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GUBBINS` matches process CGPHYLOGENY:GUBBINS
+Dec-13 23:13:37.230 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.230 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.234 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNP_SITES` matches process CGPHYLOGENY:SNP_SITES
+Dec-13 23:13:37.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.234 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.239 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTTREE` matches process CGPHYLOGENY:FASTTREE
+Dec-13 23:13:37.240 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.240 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.244 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GGTREE` matches process CGPHYLOGENY:GGTREE
+Dec-13 23:13:37.245 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-13 23:13:37.245 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-13 23:13:37.252 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CGPHYLOGENY:SNIPPY_CORE, SNIPPY_CLEAN, GGTREE, GUBBINS, SNIPPY_CORE, FASTTREE, CGPHYLOGENY:GGTREE, SNP_SITES, CGPHYLOGENY:FASTTREE, CGPHYLOGENY:SNIPPY_RUN, CGPHYLOGENY:GUBBINS, CGPHYLOGENY:SNIPPY_CLEAN, CGPHYLOGENY:SNP_SITES, SNIPPY_RUN
+Dec-13 23:13:37.253 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Dec-13 23:13:37.261 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:SNIPPY_RUN
+Dec-13 23:13:37.262 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:SNIPPY_CORE
+Dec-13 23:13:37.262 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *.fasta; options: [:]
+Dec-13 23:13:37.263 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:SNIPPY_CLEAN
+Dec-13 23:13:37.265 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:GUBBINS
+Dec-13 23:13:37.266 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:SNP_SITES
+Dec-13 23:13:37.267 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:FASTTREE
+Dec-13 23:13:37.269 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CGPHYLOGENY:GGTREE
+Dec-13 23:13:37.273 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-13 23:13:37.280 [main] DEBUG nextflow.Session - Session await
+Dec-13 23:13:37.524 [Actor Thread 16] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/snippy:4.6.0--hdfd78af_2; path=/mnt/cidgoh-object-storage/images/depot.galaxyproject.org-singularity-snippy-4.6.0--hdfd78af_2.img
+Dec-13 23:13:37.750 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.754 [Task submitter] INFO  nextflow.Session - [e7/8c9281] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample06)
+Dec-13 23:13:37.765 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.765 [Task submitter] INFO  nextflow.Session - [89/fcacce] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample03)
+Dec-13 23:13:37.774 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.775 [Task submitter] INFO  nextflow.Session - [bf/351d7b] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample04)
+Dec-13 23:13:37.784 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.785 [Task submitter] INFO  nextflow.Session - [e6/692e55] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample01)
+Dec-13 23:13:37.793 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.794 [Task submitter] INFO  nextflow.Session - [6f/6b6c6f] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample10)
+Dec-13 23:13:37.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.809 [Task submitter] INFO  nextflow.Session - [1a/77eeb9] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample05)
+Dec-13 23:13:37.817 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.818 [Task submitter] INFO  nextflow.Session - [08/0adeef] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample02)
+Dec-13 23:13:37.842 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.843 [Task submitter] INFO  nextflow.Session - [24/d7d7c2] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample07)
+Dec-13 23:13:37.850 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.851 [Task submitter] INFO  nextflow.Session - [20/cc60fa] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample08)
+Dec-13 23:13:37.858 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:13:37.859 [Task submitter] INFO  nextflow.Session - [20/89ccbe] Submitted process > CGPHYLOGENY:SNIPPY_RUN (sample09)
+Dec-13 23:15:04.741 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: CGPHYLOGENY:SNIPPY_RUN (sample06); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/e7/8c9281e3f414f659811cb6dbd2d0da]
+Dec-13 23:15:04.796 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-13 23:15:04.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CGPHYLOGENY:SNIPPY_RUN (sample03); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/89/fcacceb0d352fba4b97c334ff5608c]
+Dec-13 23:15:04.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: CGPHYLOGENY:SNIPPY_RUN (sample05); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/1a/77eeb9b7f9bf4792ac36a2cece73b2]
+Dec-13 23:15:04.847 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: CGPHYLOGENY:SNIPPY_RUN (sample02); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/08/0adeefe2da61f74b2441ace3477e75]
+Dec-13 23:15:04.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: CGPHYLOGENY:SNIPPY_RUN (sample09); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/20/89ccbeddb648606eb2500a6d890148]
+Dec-13 23:15:10.773 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: CGPHYLOGENY:SNIPPY_RUN (sample01); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/e6/692e558ade22150efa6faccbb9de2c]
+Dec-13 23:15:10.782 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: CGPHYLOGENY:SNIPPY_RUN (sample10); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/6f/6b6c6f615f93abcbeb13d462ac7b90]
+Dec-13 23:15:10.787 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: CGPHYLOGENY:SNIPPY_RUN (sample07); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/24/d7d7c2c249ff32abd977d4ba0f44d7]
+Dec-13 23:15:10.790 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: CGPHYLOGENY:SNIPPY_RUN (sample08); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/20/cc60faf55d22f42ef4f32b04e9082b]
+Dec-13 23:15:10.872 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: CGPHYLOGENY:SNIPPY_RUN (sample04); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/bf/351d7bcc8582b8e98053f65d26bd90]
+Dec-13 23:15:10.966 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:15:10.967 [Task submitter] INFO  nextflow.Session - [bb/6e387f] Submitted process > CGPHYLOGENY:SNIPPY_CORE
+Dec-13 23:15:21.084 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: CGPHYLOGENY:SNIPPY_CORE; status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/bb/6e387fa5ac6e5b5d30037ab4ce3bcc]
+Dec-13 23:15:21.106 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:15:21.107 [Task submitter] INFO  nextflow.Session - [91/fa546c] Submitted process > CGPHYLOGENY:SNIPPY_CLEAN
+Dec-13 23:15:24.842 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: CGPHYLOGENY:SNIPPY_CLEAN; status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/91/fa546c2b7386887be8f68a7f353e4a]
+Dec-13 23:15:24.854 [Actor Thread 11] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/gubbins:3.0.0--py39h5bf99c6_0; path=/mnt/cidgoh-object-storage/images/depot.galaxyproject.org-singularity-gubbins-3.0.0--py39h5bf99c6_0.img
+Dec-13 23:15:24.959 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:15:24.961 [Task submitter] INFO  nextflow.Session - [7c/6efa82] Submitted process > CGPHYLOGENY:GUBBINS
+Dec-13 23:18:37.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 13; name: CGPHYLOGENY:GUBBINS; status: RUNNING; exit: -; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/7c/6efa82d781d91d08f78f104d9107e0]
+Dec-13 23:20:20.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: CGPHYLOGENY:GUBBINS; status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/7c/6efa82d781d91d08f78f104d9107e0]
+Dec-13 23:20:20.236 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:20:20.237 [Task submitter] INFO  nextflow.Session - [9e/7f7d01] Submitted process > CGPHYLOGENY:SNP_SITES
+Dec-13 23:20:22.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: CGPHYLOGENY:SNP_SITES; status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/9e/7f7d0134aa6f35a7a50c974cfd3249]
+Dec-13 23:20:22.453 [Actor Thread 4] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/fasttree:2.1.10--h516909a_4; path=/mnt/cidgoh-object-storage/images/depot.galaxyproject.org-singularity-fasttree-2.1.10--h516909a_4.img
+Dec-13 23:20:22.735 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:20:22.736 [Task submitter] INFO  nextflow.Session - [33/9e273e] Submitted process > CGPHYLOGENY:FASTTREE
+Dec-13 23:20:28.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: CGPHYLOGENY:FASTTREE; status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/33/9e273e468748917eb43b3f3717c780]
+Dec-13 23:20:28.372 [Actor Thread 11] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bioconductor-ggtree%3A3.8.0--r43hdfd78af_0; path=/mnt/cidgoh-object-storage/images/depot.galaxyproject.org-singularity-bioconductor-ggtree%3A3.8.0--r43hdfd78af_0.img
+Dec-13 23:20:28.413 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-13 23:20:28.414 [Task submitter] INFO  nextflow.Session - [f7/e82472] Submitted process > CGPHYLOGENY:GGTREE (1)
+Dec-13 23:20:34.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: CGPHYLOGENY:GGTREE (1); status: COMPLETED; exit: 0; error: -; workDir: /opt/share/nextflow_workdir/jupyter-myee/f7/e82472406100b35068a57b4c296292]
+Dec-13 23:20:34.466 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-13 23:20:34.553 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-13 23:20:34.565 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Dec-13 23:20:34.576 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=16; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=20m 22s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=10; peakCpus=10; peakMemory=0; ]
+Dec-13 23:20:34.721 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-13 23:20:34.732 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Dec-13 23:20:34.733 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

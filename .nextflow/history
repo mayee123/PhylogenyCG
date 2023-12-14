@@ -1,0 +1,8 @@
+2023-12-12 18:42:11	8.9s	adoring_lorenz	ERR	e0dbfc26eb6cd7c380acbb76d0e311bf	3f374944-0324-452c-906f-1e8a85a7c6f4	nextflow run main.nf -profile singularity
+2023-12-12 18:49:01	6m 45s	lonely_yalow	OK	e0dbfc26eb6cd7c380acbb76d0e311bf	db6354e8-9ddc-4ef9-8795-e7d5720bbd3e	nextflow run main.nf -profile singularity
+2023-12-13 23:13:34	7m 1s	fabulous_boltzmann	OK	e0dbfc26eb6cd7c380acbb76d0e311bf	794a6d21-de72-4f4a-bae5-ebff296ea3db	nextflow run main.nf -profile singularity
+2023-12-14 03:38:49	-	awesome_heisenberg	-	2e4a53cf1968bd8b0f0b3e0aeb9aaad5	1ea03d34-327f-443b-86d2-d3994843ef23	nextflow run main.nf -profile singularity
+2023-12-14 03:39:40	6m 41s	furious_wescoff	OK	361319c53600bdedb1d2c5d0937a419d	b0a9ebed-f1d5-4ab2-a253-ec9d0ed4d6d7	nextflow run main.nf -profile singularity
+2023-12-14 03:52:21	7.8s	insane_williams	ERR	361319c53600bdedb1d2c5d0937a419d	7d36a1aa-cecc-4ee7-a73f-fbee8cb02c57	nextflow run main.nf -profile singularity
+2023-12-14 04:01:01	6m 35s	mad_babbage	OK	361319c53600bdedb1d2c5d0937a419d	e6377f14-e3e1-4cc2-800a-4b66067ca68a	nextflow run main.nf -profile singularity
+2023-12-14 04:17:21	6m 27s	magical_aryabhata	OK	361319c53600bdedb1d2c5d0937a419d	52868a47-2f4a-4988-8268-ae0c739c4a94	nextflow run main.nf -profile singularity
