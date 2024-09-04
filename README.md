@@ -48,7 +48,7 @@ R 4.3.1
 ## Usage
 
 #### Input
-This pipeline takes as input assembled genomes in fasta format. The genomes should be bacterial strains from the same species and include a reference genome. The path to the fasta files should be added to `nextflow.config` with the strain genomes being added to `params.genome` and the reference genome being added to `params.reference` . A test dataset is currently included and is located in the `data/` and `ref/` folders. 
+This pipeline takes as input assembled genomes in fasta format. The genomes should be bacterial strains from the same species and include a reference genome. The path to the fasta files should be added to `nextflow.config` with the strain genomes being added to `params.genome` and the reference genome being added to `params.reference` . A test dataset of _Listeria monocytogenes_ is currently included and is located in the `data/` and `ref/` folders. 
 
 #### Output
 This pipeline outputs a tree in the newick format, named `clean.core.tree` located in `results/Fasttree`. It also visualizes this newick tree in a pdf format, `Rplots.pdf` located in `results/Visualization_ggtree`. To customize the tree, edit the R script located in `modules/local/script.r`
