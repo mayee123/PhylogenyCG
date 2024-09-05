@@ -48,10 +48,10 @@ R 4.3.1
 ## Usage
 
 #### Input
-This pipeline takes as input assembled genomes in fasta format. The genomes should be bacterial strains from the same species and include a reference genome. The path to the fasta files should be added to `nextflow.config` with the strain genomes being added to `params.genome` and the reference genome being added to `params.reference` . A test dataset of _Listeria monocytogenes_ is currently included and is located in the `data/` and `ref/` folders. 
+This pipeline takes as input assembled genomes in fasta format. The genomes should be bacterial strains from the same species and include a reference genome. The path to the fasta files should be added to `nextflow.config` with the strain genomes being added to `params.genome` and the reference genome being added to `params.reference` . A test dataset of _Listeria monocytogenes_(9) is currently included and is located in the `data/` and `ref/` folders. 
 
 #### Output
-This pipeline outputs a tree in the newick format, named `clean.core.tree` located in `results/Fasttree`. It also visualizes this newick tree in a pdf format, `Rplots.pdf` located in `results/Visualization_ggtree`. To customize the tree, edit the R script located in `modules/local/script.r`
+This pipeline outputs a tree in the newick format, named `clean.core.tree` located in `results/Fasttree`. It also visualizes this newick tree in a pdf format, `Rplots.pdf` located in `results/Visualization_ggtree`. For visualization purposes, the tree ignores branch lengths. To customize the tree, edit the R script located in `modules/local/script.r`
 
 ### To run the pipeline:
 
@@ -110,3 +110,5 @@ The resulting file, `Rplots.pdf` should be a visualization that looks like this
 (7) YuLab, SMU. ggtree. GitHub repository.(2019) https://github.com/YuLab-SMU/ggtree 
 
 (8) Ewels, P.A., Peltzer, A., Fillinger, S. et al. The nf-core framework for community-curated bioinformatics pipelines. Nat Biotechnol 38, 276–278 (2020)
+
+(9)Burall, L. S., Grim, C. J. et al. A clade of Listeria monocytogenes serotype 4b variant strains linked to recent listeriosis outbreaks associated with produce from a defined geographic region in the US. PloS one 12, 5 (2017)

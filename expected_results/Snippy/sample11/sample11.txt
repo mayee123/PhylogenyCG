@@ -1,0 +1,6 @@
+DateTime	2024-09-05T10:12:56
+ReadFiles	fake_reads.fq
+Reference	/home/myee/PhylogenyCG/ref/reference.fna
+ReferenceSize	2961706
+Software	snippy 4.6.0
+VariantTotal	0

@@ -1,22 +1,22 @@
 ### echo snippy 4.6.0
-### cd /opt/share/nextflow_workdir/jupyter-myee/6f/6b6c6f615f93abcbeb13d462ac7b90
+### cd /scratch/group_share/nextflow_workdir/myee/13/39159a625a1fbe9692037fb956d620
 
-### /usr/local/bin/snippy --cpus 1 --outdir sample10 --reference reference.fna --prefix sample10 --ctgs sample10.fasta --force
+### /usr/local/bin/snippy --cpus 1 --outdir sample10 --reference reference.fna --prefix sample10 --ctgs sample10.fna --force
 
 ### samtools faidx reference/ref.fa
 
 
 ### bwa index reference/ref.fa
 
-[bwa_index] Pack FASTA... 0.05 sec
+[bwa_index] Pack FASTA... 0.02 sec
 [bwa_index] Construct BWT for the packed sequence...
-[bwa_index] 0.70 seconds elapse.
+[bwa_index] 0.55 seconds elapse.
 [bwa_index] Update BWT... 0.02 sec
-[bwa_index] Pack forward-only FASTA... 0.02 sec
-[bwa_index] Construct SA from BWT and Occ... 0.20 sec
+[bwa_index] Pack forward-only FASTA... 0.01 sec
+[bwa_index] Construct SA from BWT and Occ... 0.30 sec
 [main] Version: 0.7.17-r1188
 [main] CMD: bwa index reference/ref.fa
-[main] Real time: 7.011 sec; CPU: 0.996 sec
+[main] Real time: 0.993 sec; CPU: 0.914 sec
 
 ### mkdir -p reference/genomes && cp -f reference/ref.fa reference/genomes/ref.fa
 
@@ -34,26 +34,26 @@
 
 [markdup] warning: unable to calculate estimated library size. Read pairs 0 should be greater than duplicate pairs 0, which should both be non zero.
 COMMAND: samtools markdup -T /tmp --threads 0 -r -s - -
-READ: 179261
-WRITTEN: 178192
-EXCLUDED: 58435
-EXAMINED: 120826
+READ: 229310
+WRITTEN: 228844
+EXCLUDED: 4340
+EXAMINED: 224970
 PAIRED: 0
-SINGLE: 120826
+SINGLE: 224970
 DUPLICATE PAIR: 0
-DUPLICATE SINGLE: 1069
+DUPLICATE SINGLE: 466
 DUPLICATE PAIR OPTICAL: 0
 DUPLICATE SINGLE OPTICAL: 0
 DUPLICATE NON PRIMARY: 0
 DUPLICATE NON PRIMARY OPTICAL: 0
-DUPLICATE PRIMARY TOTAL: 1069
-DUPLICATE TOTAL: 1069
+DUPLICATE PRIMARY TOTAL: 466
+DUPLICATE TOTAL: 466
 ESTIMATED_LIBRARY_SIZE: 0
 
 ### samtools index sample10.bam
 
 
-### fasta_generate_regions.py reference/ref.fa.fai 2100034 > reference/ref.txt
+### fasta_generate_regions.py reference/ref.fa.fai 3013319 > reference/ref.txt
 
 
 ### freebayes-parallel reference/ref.txt 1 -p 2 -P 0 -C 2 -F 0.05 --min-coverage 10 --min-repeat-entropy 1.0 -q 13 -m 60 --strict-vcf   -f reference/ref.fa sample10.bam > sample10.raw.vcf
@@ -68,10 +68,10 @@ ESTIMATED_LIBRARY_SIZE: 0
 ### /usr/local/bin/snippy-vcf_to_tab --gff reference/ref.gff --ref reference/ref.fa --vcf sample10.vcf > sample10.tab
 
 Loading reference: reference/ref.fa
-Loaded 1 sequences.
+Loaded 21 sequences.
 Loading features: reference/ref.gff
 Parsing variants: sample10.vcf
-Converted 28059 SNPs to TAB format.
+Converted 7226 SNPs to TAB format.
 
 ### /usr/local/bin/snippy-vcf_extract_subs sample10.filt.vcf > sample10.subs.vcf
 
@@ -84,7 +84,7 @@ Converted 28059 SNPs to TAB format.
 
 ### bcftools consensus --sample sample10 -f reference/ref.fa -o sample10.consensus.fa sample10.vcf.gz
 
-Applied 28059 variants
+Applied 7226 variants
 
 ### bcftools convert -Oz -o sample10.subs.vcf.gz sample10.subs.vcf
 
@@ -94,7 +94,7 @@ Applied 28059 variants
 
 ### bcftools consensus --sample sample10 -f reference/ref.fa -o sample10.consensus.subs.fa sample10.subs.vcf.gz
 
-Applied 34611 variants
+Applied 8274 variants
 
 ### rm -f sample10.subs.vcf.gz sample10.subs.vcf.gz.csi sample10.subs.vcf.gz.tbi
 

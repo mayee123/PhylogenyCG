@@ -1,0 +1,103 @@
+### echo snippy 4.6.0
+### cd /scratch/group_share/nextflow_workdir/myee/e1/e0795f383f005fc47b7400deaa2521
+
+### /usr/local/bin/snippy --cpus 1 --outdir sample11 --reference reference.fna --prefix sample11 --ctgs sample11.fna --force
+
+### samtools faidx reference/ref.fa
+
+
+### bwa index reference/ref.fa
+
+[bwa_index] Pack FASTA... 0.02 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.52 seconds elapse.
+[bwa_index] Update BWT... 0.02 sec
+[bwa_index] Pack forward-only FASTA... 0.01 sec
+[bwa_index] Construct SA from BWT and Occ... 0.31 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index reference/ref.fa
+[main] Real time: 1.053 sec; CPU: 0.888 sec
+
+### mkdir -p reference/genomes && cp -f reference/ref.fa reference/genomes/ref.fa
+
+
+### ln -sf reference/ref.fa .
+
+
+### ln -sf reference/ref.fa.fai .
+
+
+### mkdir -p reference/ref && gzip -c reference/ref.gff > reference/ref/genes.gff.gz
+
+
+### bwa mem  -Y -M -R '@RG\tID:sample11\tSM:sample11' -t 1 reference/ref.fa fake_reads.fq | samclip --max 10 --ref reference/ref.fa.fai | samtools sort -n -l 0 -T /tmp --threads 0 -m 8000M | samtools fixmate -m --threads 0 - - | samtools sort -l 0 -T /tmp --threads 0 -m 8000M | samtools markdup -T /tmp --threads 0 -r -s - - > sample11.bam
+
+[markdup] warning: unable to calculate estimated library size. Read pairs 0 should be greater than duplicate pairs 0, which should both be non zero.
+COMMAND: samtools markdup -T /tmp --threads 0 -r -s - -
+READ: 237794
+WRITTEN: 236576
+EXCLUDED: 0
+EXAMINED: 237794
+PAIRED: 0
+SINGLE: 237794
+DUPLICATE PAIR: 0
+DUPLICATE SINGLE: 1218
+DUPLICATE PAIR OPTICAL: 0
+DUPLICATE SINGLE OPTICAL: 0
+DUPLICATE NON PRIMARY: 0
+DUPLICATE NON PRIMARY OPTICAL: 0
+DUPLICATE PRIMARY TOTAL: 1218
+DUPLICATE TOTAL: 1218
+ESTIMATED_LIBRARY_SIZE: 0
+
+### samtools index sample11.bam
+
+
+### fasta_generate_regions.py reference/ref.fa.fai 3013319 > reference/ref.txt
+
+
+### freebayes-parallel reference/ref.txt 1 -p 2 -P 0 -C 2 -F 0.05 --min-coverage 10 --min-repeat-entropy 1.0 -q 13 -m 60 --strict-vcf   -f reference/ref.fa sample11.bam > sample11.raw.vcf
+
+
+### bcftools view --include 'FMT/GT="1/1" && QUAL>=100 && FMT/DP>=10 && (FMT/AO)/(FMT/DP)>=0' sample11.raw.vcf  | vt normalize -r reference/ref.fa - | bcftools annotate --remove '^INFO/TYPE,^INFO/DP,^INFO/RO,^INFO/AO,^INFO/AB,^FORMAT/GT,^FORMAT/DP,^FORMAT/RO,^FORMAT/AO,^FORMAT/QR,^FORMAT/QA,^FORMAT/GL' > sample11.filt.vcf
+
+
+### cp sample11.filt.vcf sample11.vcf
+
+
+### /usr/local/bin/snippy-vcf_to_tab --gff reference/ref.gff --ref reference/ref.fa --vcf sample11.vcf > sample11.tab
+
+Loading reference: reference/ref.fa
+Loaded 21 sequences.
+Loading features: reference/ref.gff
+Parsing variants: sample11.vcf
+Converted 0 SNPs to TAB format.
+
+### /usr/local/bin/snippy-vcf_extract_subs sample11.filt.vcf > sample11.subs.vcf
+
+
+### bcftools convert -Oz -o sample11.vcf.gz sample11.vcf
+
+
+### bcftools index -f sample11.vcf.gz
+
+
+### bcftools consensus --sample sample11 -f reference/ref.fa -o sample11.consensus.fa sample11.vcf.gz
+
+Applied 0 variants
+
+### bcftools convert -Oz -o sample11.subs.vcf.gz sample11.subs.vcf
+
+
+### bcftools index -f sample11.subs.vcf.gz
+
+
+### bcftools consensus --sample sample11 -f reference/ref.fa -o sample11.consensus.subs.fa sample11.subs.vcf.gz
+
+Applied 0 variants
+
+### rm -f sample11.subs.vcf.gz sample11.subs.vcf.gz.csi sample11.subs.vcf.gz.tbi
+
+
+### rm -f fake_reads\.fq
+

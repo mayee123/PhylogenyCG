@@ -1,0 +1,10 @@
+DateTime	2024-09-05T10:15:44
+ReadFiles	fake_reads.fq
+Reference	/home/myee/PhylogenyCG/ref/reference.fna
+ReferenceSize	2961706
+Software	snippy 4.6.0
+Variant-COMPLEX	160
+Variant-DEL	9
+Variant-INS	7
+Variant-SNP	408
+VariantTotal	584

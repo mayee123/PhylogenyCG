@@ -1,0 +1,46 @@
+##fileformat=VCFv4.2
+##snippy="snippy-vcf_extract_subs sample11.filt.vcf"
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20240905
+##source=freeBayes v1.3.6
+##reference=reference/ref.fa
+##contig=<ID=LNOD01000001.1,length=542083>
+##contig=<ID=LNOD01000015.1,length=141997>
+##contig=<ID=LNOD01000016.1,length=5109>
+##contig=<ID=LNOD01000017.1,length=2271>
+##contig=<ID=LNOD01000018.1,length=99730>
+##contig=<ID=LNOD01000019.1,length=16591>
+##contig=<ID=LNOD01000020.1,length=1662>
+##contig=<ID=LNOD01000021.1,length=526>
+##contig=<ID=LNOD01000002.1,length=576219>
+##contig=<ID=LNOD01000003.1,length=573436>
+##contig=<ID=LNOD01000004.1,length=41843>
+##contig=<ID=LNOD01000005.1,length=317420>
+##contig=<ID=LNOD01000006.1,length=27340>
+##contig=<ID=LNOD01000007.1,length=197840>
+##contig=<ID=LNOD01000008.1,length=28770>
+##contig=<ID=LNOD01000009.1,length=63693>
+##contig=<ID=LNOD01000010.1,length=112765>
+##contig=<ID=LNOD01000011.1,length=1799>
+##contig=<ID=LNOD01000012.1,length=3171>
+##contig=<ID=LNOD01000013.1,length=30502>
+##contig=<ID=LNOD01000014.1,length=176939>
+##phasing=none
+##commandline="freebayes -p 2 -P 0 -C 2 -F 0.05 --min-coverage 10 --min-repeat-entropy 1.0 -q 13 -m 60 --strict-vcf -f reference/ref.fa sample11.bam --region LNOD01000001.1:0-542083"
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth at the locus">
+##INFO=<ID=RO,Number=1,Type=Integer,Description="Count of full observations of the reference haplotype.">
+##INFO=<ID=AO,Number=A,Type=Integer,Description="Count of full observations of this alternate haplotype.">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="The type of allele, either snp, mnp, ins, del, or complex.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
+##FORMAT=<ID=RO,Number=1,Type=Integer,Description="Reference allele observation count">
+##FORMAT=<ID=QR,Number=1,Type=Integer,Description="Sum of quality of the reference observations">
+##FORMAT=<ID=AO,Number=A,Type=Integer,Description="Alternate allele observation count">
+##FORMAT=<ID=QA,Number=A,Type=Integer,Description="Sum of quality of the alternate observations">
+##bcftools_viewVersion=1.15+htslib-1.14
+##bcftools_viewCommand=view --include 'FMT/GT="1/1" && QUAL>=100 && FMT/DP>=10 && (FMT/AO)/(FMT/DP)>=0' sample11.raw.vcf; Date=Thu Sep  5 10:13:30 2024
+##bcftools_annotateVersion=1.15+htslib-1.14
+##bcftools_annotateCommand=annotate --remove ^INFO/TYPE,^INFO/DP,^INFO/RO,^INFO/AO,^INFO/AB,^FORMAT/GT,^FORMAT/DP,^FORMAT/RO,^FORMAT/AO,^FORMAT/QR,^FORMAT/QA,^FORMAT/GL; Date=Thu Sep  5 10:13:30 2024
+##INFO=<ID=OLDVAR,Number=R,Type=String,Description="Original REF,ALT before decomposition">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sample11
