@@ -107,8 +107,8 @@ The resulting file, `Rplots.pdf` should be a visualization that looks like this
 
 (6)Price MN, Dehal PS, Arkin AP. FastTree 2 – Approximately Maximum-Likelihood Trees for Large Alignments. PLOS ONE 5, 3 (2010)
 
-(7) YuLab, SMU. ggtree. GitHub repository.(2019) https://github.com/YuLab-SMU/ggtree 
+(7)YuLab, SMU. ggtree. GitHub repository.(2019) https://github.com/YuLab-SMU/ggtree 
 
-(8) Ewels, P.A., Peltzer, A., Fillinger, S. et al. The nf-core framework for community-curated bioinformatics pipelines. Nat Biotechnol 38, 276–278 (2020)
+(8)Ewels, P.A., Peltzer, A., Fillinger, S. et al. The nf-core framework for community-curated bioinformatics pipelines. Nat Biotechnol 38, 276–278 (2020)
 
 (9)Burall, L. S., Grim, C. J. et al. A clade of Listeria monocytogenes serotype 4b variant strains linked to recent listeriosis outbreaks associated with produce from a defined geographic region in the US. PloS one 12, 5 (2017)
