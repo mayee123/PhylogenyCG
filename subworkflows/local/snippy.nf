@@ -21,13 +21,13 @@ process SNP_SITES {
         'biocontainers/snippy:4.6.0--hdfd78af_1' }"
 
     input:
-    path(hi)
+    path(sites)
     
     output:
     path("clean.core.aln")
     
     script:
     """
-    snp-sites -c $hi > clean.core.aln
+    snp-sites -c $sites > clean.core.aln
     """
 }
